@@ -4,11 +4,11 @@ class NumberData{
     static int arr[] = new int[N]; 
     public void getNum(){
         Scanner sc = new Scanner(System.in); 
-        for(int i : arr ){
+        for(int i = 0; i < N; i++ ){
             System.out.println("Enter number : ");
-            i = sc.nextInt(); 
+            arr[i] = sc.nextInt(); 
         }
-        sc.close();
+        // sc.close();
     }
     
 }
@@ -32,7 +32,7 @@ class NumPlay extends NumberData{
     public int maxNum(){
         int max = 0; 
         for(int i = 0; i < N; i++){
-            if(max > arr[i]){
+            if(max < arr[i]){
                 max = arr[i]; 
             }
         }
@@ -51,6 +51,43 @@ class NumPlay extends NumberData{
 public class NumProgram{
     public static void main(String[] args) {
         NumPlay n = new NumPlay(); 
+        Scanner s = new Scanner(System.in); 
+        int ch = 0; // choice 
+        
+        System.out.println("Enter 5 number : ");
+        n.getNum();
+        
+        do{
+            System.out.println("1. Display numbers entered.");
+            System.out.println("2. Sum of the number");
+            System.out.println("3. Average of the numbers.");
+            System.out.println("4. Maximum of the numbers");
+            System.out.println("5. Minimum of the numbers.");
+            System.out.println("6. Exit ");
+            System.out.println("Enter your choice ");
+            ch = s.nextInt(); 
+            if(ch == 1){
+                n.display();        
+            }
+            else if(ch == 2){
+                System.out.println("Sum of array : " + n.sum());
+            }
+            else if(ch == 3){
+                System.out.println("Average of array : " + n.sum());
+            }
+            else if(ch == 4){
+                System.out.println("Minimum of array : " + n.minNum());
+            }
+            else if(ch == 5){
+                System.out.println("Maximum of array : " + n.maxNum());
+            }
+            else{
+                System.out.println("Thank you user !");
+            } 
+            
+        }
+        while(ch != 6); 
+        // s.close(); 
         
     }
 }
