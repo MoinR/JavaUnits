@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /*
 A shop during festival season offers a
 
@@ -9,7 +7,10 @@ and 15% for purchase value of Rs.1,500 or more.
 
 Write a program to implement the above scheme for a given sales and print out the sales and print out the sales value, discount and net amount
 payable by a customer. Create necessary methods and constructors.
+
  */
+
+import java.util.Scanner;
 public class Invoice {
     static int purchase;   
     static float discount;

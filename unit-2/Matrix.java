@@ -2,6 +2,16 @@
 import java.util.Scanner;
 public class Matrix{
     static final int N = 3;
+
+    void getMatrix(){
+        for(int i = 0; i < N; i++){
+            for(int j = 0; j < N; j++){
+                System.out.println("Enter element : ");
+                x[i][j] = sc.nextInt();
+            }
+        }       
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -11,20 +21,10 @@ public class Matrix{
         int z[][] = new int[N][N];
         
         System.out.println("Enter First Matrix : ");
-        for(int i = 0; i < N; i++){
-            for(int j = 0; j < N; j++){
-                System.out.println("Enter element : ");
-                x[i][j] = sc.nextInt();
-            }
-        }
+        x.getMatrix(); 
         
         System.out.println("Enter Second Matrix : ");
-        for(int i = 0; i < N; i++){
-            for(int j = 0; j < N; j++){
-                System.out.println("Enter element : ");
-                y[i][j] = sc.nextInt();
-            }
-        }
+        y.getMatrix(); 
         
         System.out.println("Sum of matrices : ");
         for(int i = 0; i<N; i++){
