@@ -11,10 +11,7 @@ interface Classify{
 public class Result implements Exam, Classify{
     @Override
     public boolean pass(int mark){
-        if(mark < 35){
-            return false; 
-        }
-        return true;
+        return (mark < 35);
     }
     @Override
     public void division(int avg){
