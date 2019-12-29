@@ -13,21 +13,19 @@ public class Result implements Exam, Classify{
     public boolean pass(int mark){
         return (mark < 35);
     }
+    
     @Override
     public void division(int avg){
-        if(avg >= 60){
+        if(avg >= 60)
             System.out.println("Division : First");
-        }
-        else if(avg >= 50 && avg < 60){
+        else if(avg >= 50 && avg < 60)
             System.out.println("Division : Second ");
-        }
-        else{
+        else
             System.out.println("Division : No division ");
-        }
     }
     public static void main(String[] args) {
-        Result r = new Result();
         Scanner sc = new Scanner(System.in); 
+        Result r = new Result();
         
         System.out.println("Enter marks (Out of 700) : ");
         int mark = sc.nextInt();
@@ -36,7 +34,9 @@ public class Result implements Exam, Classify{
             System.out.println("Student has passed the exam ");
             r.division(avg);
         }
-        
+        else{
+            System.out.println("Student failed ");
+        }
         sc.close();
     }
 }
