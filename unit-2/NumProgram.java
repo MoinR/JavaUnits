@@ -1,3 +1,4 @@
+/* Program - 6  */
 import java.util.Scanner;
 class NumberData{
     static final int N = 5; 
@@ -8,7 +9,6 @@ class NumberData{
             System.out.println("Enter number : ");
             arr[i] = sc.nextInt(); 
         }
-        // sc.close();
     }
     
 }

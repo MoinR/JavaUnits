@@ -1,3 +1,4 @@
+/* Program - 5 */
 import java.util.Scanner;
 interface Number{
     int Process(int x, int y);

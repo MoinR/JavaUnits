@@ -1,3 +1,4 @@
+/* Program - 4 */
 import java.util.Scanner;
 public class MinQuote {
     static final int N = 3; 

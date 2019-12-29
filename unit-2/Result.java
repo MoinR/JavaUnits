@@ -1,3 +1,4 @@
+/* Program - 8 */
 import java.util.Scanner;
 
 interface Exam{
