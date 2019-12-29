@@ -30,7 +30,7 @@ class NumPlay extends NumberData{
         return avg; 
     }
     public int maxNum(){
-        int max = 0; 
+        int max = arr[0]; 
         for(int i = 0; i < N; i++){
             if(max < arr[i]){
                 max = arr[i]; 
@@ -39,9 +39,9 @@ class NumPlay extends NumberData{
         return max; 
     }
     public int minNum(){
-        int min = 0; 
+        int min = arr[0]; 
         for(int i = 0; i < N; i++){
-            if(min < arr[i]){
+            if(min > arr[i]){
                 min = arr[i]; 
             }
         }
@@ -73,13 +73,13 @@ public class NumProgram{
                 System.out.println("Sum of array : " + n.sum());
             }
             else if(ch == 3){
-                System.out.println("Average of array : " + n.sum());
+                System.out.println("Average of array : " + n.numAvg());
             }
             else if(ch == 4){
-                System.out.println("Minimum of array : " + n.minNum());
+                System.out.println("Maximum of array : " + n.maxNum());
             }
             else if(ch == 5){
-                System.out.println("Maximum of array : " + n.maxNum());
+                System.out.println("Minimum of array : " + n.minNum());
             }
             else{
                 System.out.println("Thank you user !");
@@ -87,7 +87,7 @@ public class NumProgram{
             
         }
         while(ch != 6); 
-        // s.close(); 
+        s.close(); 
         
     }
 }
