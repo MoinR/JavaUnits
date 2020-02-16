@@ -11,10 +11,6 @@ public class ProgramThree implements Runnable {
         this.y = y; 
     }
     
-    public void start(){
-        run();
-    }
-
     @Override
     public void run(){ 
         try{
@@ -31,12 +27,12 @@ public class ProgramThree implements Runnable {
         } 
     }
     public static void main(String[] args) {
-        ProgramThree t1 = new ProgramThree(1, 10); 
-        ProgramThree t2 = new ProgramThree(11, 20); 
+        Thread t1 = new Thread( new ProgramThree(1, 10) ); 
+        Thread t2 = new Thread( new ProgramThree(11, 20) ); 
 
         t1.start(); 
         t2.start(); 
-
+        
         System.out.println("Task completed");
     }
 }
