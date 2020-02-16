@@ -8,12 +8,8 @@ public class ProgramFour implements Runnable {
     public ProgramFour(int x, String m){
         n = x; 
         msg = m; 
-   }
-    
-    public void start(){
-        run();
     }
-
+   
     @Override
     public void run(){ 
         try{
@@ -26,25 +22,18 @@ public class ProgramFour implements Runnable {
         } 
     }
     public static void main(String[] args) {
-        ProgramFour p1 = new ProgramFour(4, "Fybca"); 
-        ProgramFour p2 = new ProgramFour(6, "Sybca"); 
-        // ProgramFour p; 
-        int a[] = new int[10];
-        a[0] = 5;
-        System.out.println(a[11]);
+        Thread p1 = new Thread( new ProgramFour(4, "Fybca") ); 
+        Thread p2 = new Thread( new ProgramFour(6, "Sybca") ); 
+        
+        p1.setPriority(Thread.MIN_PRIORITY);
+        p2.setPriority(Thread.MAX_PRIORITY);
 
-        Thread t1 = new Thread(p1); 
-        Thread t2 = new Thread(p2); 
-
-        t1.setPriority(Thread.MIN_PRIORITY);
-        t1.setPriority(Thread.MAX_PRIORITY);
-
-        t1.start(); 
-        t2.start(); 
+        p1.start(); 
+        p2.start(); 
 
         try{
-            t1.join(); 
-            t2.join(); 
+            p1.join(); 
+            p2.join(); 
         }catch(Exception e){
             System.out.println(e);
         }
