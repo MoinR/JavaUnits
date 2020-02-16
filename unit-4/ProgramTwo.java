@@ -16,26 +16,19 @@ public class ProgramTwo {
     public static void main(String[] args) {
         
         // Object Instantiation 
-        T t1 = new T();
-        T t2 = new T();
-        T t3 = new T();
-        T t4 = new T();
-        T t5 = new T();
+        T x[] = new T[5];
         
         // Starting thread 
-        t1.start();
-        t2.start();
-        t3.start();
-        t4.start();
-        t5.start();
- 
+        for(int i = 1; i < 5; i++){
+           x[i] = new T(); 
+           x[i].start(); 
+        }
+
         // Joining threads will keep main thread in waiting state
         try{
-            t1.join(); 
-            t2.join();
-            t3.join();
-            t4.join();
-            t5.join();
+            for(int i = 1; i < 5; i++){
+                x[i].join(); ;            
+            }
         }
         catch(InterruptedException e){
             System.out.println(e);
