@@ -21,7 +21,7 @@ public class StringPlay {
         
         System.out.println("\nNumber of characters : " + sb.length()); 
         for(int i = sb.length()-1; i > -1; i--){
-            System.out.println(sb.charAt(i) + " is on " + (i+1) + " position" );
+            System.out.println(s.charAt(i) + " is on " + (i+1) + " position" );
         }
 
         if(s.equalsIgnoreCase(sb.toString())){
