@@ -11,7 +11,7 @@ class Sum implements Number{
     }
 }
 
-public class Average extends Sum implements Number{
+public class Average extends Sum {
     @Override
     public int Process(int x, int y) {
         return super.Process(x, y)/2; 

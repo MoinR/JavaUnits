@@ -13,7 +13,7 @@ public class Result implements Exam, Classify{
     public boolean pass(int mark){
         return (mark < 35);
     }
-    
+     
     @Override
     public void division(int avg){
         if(avg >= 60)

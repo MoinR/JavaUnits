@@ -1,4 +1,13 @@
-/* Program - 6  */
+/* Program - 6 : Create a class called NumberData that accept any array of the five numbers.
+   Create a sub class called Numplay which provides methods for followings:
+        1. Display numbers entered.
+        2. Sum of the number.
+        3. Average of the numbers.
+        4. Maximum of the numbers.
+        5. Minimum of the numbers.
+    Create a class that provides menu for above methods. Give choice from the
+    command­line argument.
+*/
 import java.util.Scanner;
 class NumberData{
     static final int N = 5; 
@@ -9,6 +18,7 @@ class NumberData{
             System.out.println("Enter number : ");
             arr[i] = sc.nextInt(); 
         }
+        sc.close(); 
     }
     
 }

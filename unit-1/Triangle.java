@@ -17,4 +17,4 @@ public class Triangle {
         
         sc.close();
     }
-}
+}Z

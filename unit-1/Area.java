@@ -1,3 +1,4 @@
+/* Write a program to calculate the area of square and rectangle by overloading the area method. */
 import java.util.Scanner;
 public class Area{
     

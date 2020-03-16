@@ -1,3 +1,4 @@
+/* Write a program to evaluate simple interest of a given principle, rate and time. */
 import java.util.Scanner;
 
 public class Calc{
