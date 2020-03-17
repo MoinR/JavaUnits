@@ -1,3 +1,10 @@
+/* Write an application that accepts marks of three different subject from user.
+Marks should be between 0 to 100, if marks of any of the subject is not belong
+to this range, generate custom exception out of RangeException. If marks of
+each subjects are greater than or equal to 40 then display message “PASS” along
+with percentage, otherwise display message “FAIL”. Also write exception
+handling code to catch all the possible runtime exceptions likely to be generated
+in the program. */
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
