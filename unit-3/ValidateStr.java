@@ -1,4 +1,7 @@
-/* Program - 6 */
+/* Write a program that takes a string from the user and validate it. The string
+6 should be at least 5 characters and should contain at least one digit. Display an
+appropriate valid message. */
+
 import java.util.Scanner;
 
 public class ValidateStr {

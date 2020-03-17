@@ -1,4 +1,6 @@
-/* Program - 9 */
+/* Create class calculation with an abstract method area( ). Create Rectangle and
+9 Triangle subclasses of calculation and find area of rectangle and triangle.*/
+
 abstract class Calculation{
     abstract void area(int x, int y); 
 }

@@ -1,4 +1,6 @@
-/* Program - 5  */
+/*Write a Java program to input n integer numbers and display lowest and second
+5 lowest number. Also handle the different exceptions possible to be thrown
+during execution.  */
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class NumPlay {
